@@ -8,6 +8,7 @@ import { PageMyPlantsComponent } from './pages/page-my-plants/page-my-plants.com
 import { PageAdminComponent } from './pages/page-admin/page-admin.component';
 import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
 import { AppRoutingModule } from './app-routing.module';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { AppRoutingModule } from './app-routing.module';
     PageHomeComponent,
     PageMyPlantsComponent,
     PageAdminComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,
