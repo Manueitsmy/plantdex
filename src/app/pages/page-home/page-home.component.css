@@ -1,0 +1,9 @@
+.container-plants {
+    display: flex;
+    /* pour mettre à la ligne */
+    flex-wrap: wrap;
+    /* pour mettre à la ligne en fin de page */
+    gap: 2rem;
+    /* pour espacer et rem pour remplacer px, plus adaptable */
+
+  }

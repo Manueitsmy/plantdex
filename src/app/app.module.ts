@@ -10,6 +10,7 @@ import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.com
 import { AppRoutingModule } from './app-routing.module';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { HttpClientModule } from '@angular/common/http';
+import { CardPlantComponent } from './components/card-plant/card-plant.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { HttpClientModule } from '@angular/common/http';
     PageMyPlantsComponent,
     PageAdminComponent,
     PageNotFoundComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    CardPlantComponent
   ],
   imports: [
     BrowserModule,
