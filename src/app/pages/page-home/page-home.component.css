@@ -3,7 +3,11 @@
     /* pour mettre à la ligne */
     flex-wrap: wrap;
     /* pour mettre à la ligne en fin de page */
-    gap: 2rem;
+    gap: 1rem;
     /* pour espacer et rem pour remplacer px, plus adaptable */
+    justify-content: space-between;
+    border-color: green;
+    border-radius : 4px
+    
 
   }

@@ -11,6 +11,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { HttpClientModule } from '@angular/common/http';
 import { CardPlantComponent } from './components/card-plant/card-plant.component';
+import { FilterSideBarComponent } from './components/filter-side-bar/filter-side-bar.component';
+import { SearchBarComponent } from './components/search-bar/search-bar.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +23,9 @@ import { CardPlantComponent } from './components/card-plant/card-plant.component
     PageAdminComponent,
     PageNotFoundComponent,
     NotFoundComponent,
-    CardPlantComponent
+    CardPlantComponent,
+    FilterSideBarComponent,
+    SearchBarComponent
   ],
   imports: [
     BrowserModule,

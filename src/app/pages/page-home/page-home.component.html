@@ -1,9 +1,19 @@
-<div class="container">
-  <h1 class="title">Plantdex</h1>
-  <div class="container-plants">
+<div class="d-flex">
+  <div>
+  <app-filter-side-bar [categoriesToDisplay]="categoriesToSend" 
+  (categoriesToFilter)="filterPlantsByCategories($event)">
+</app-filter-side-bar>
+</div>
+<div>
+<div>
+  <app-search-bar (searchHome)="filterPlantsBySearch($event)">
+  </app-search-bar> 
+  </div>
+  <div class="container-plants  p-4">
     <app-card-plant
-      *ngFor="let plantData of plantsToDisplay"
+      *ngFor="let plantData of filteredPlants"
       [plant]="plantData"
     ></app-card-plant>
   </div>
+</div>
 </div>
