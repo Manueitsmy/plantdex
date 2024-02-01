@@ -1,4 +1,3 @@
-import { query } from '@angular/animations';
 import { Component, EventEmitter, Output } from '@angular/core';
 
 @Component({
@@ -11,7 +10,5 @@ export class SearchBarComponent {
 
 entrySearchBar(eventDepuisHTML: any) {
   this.searchHome.emit(eventDepuisHTML.target.value);
-  this.searchHome.emit(query);
-  
 }
 }

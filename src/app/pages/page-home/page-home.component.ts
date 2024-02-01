@@ -12,6 +12,9 @@ export class PageHomeComponent implements OnInit{
   plantsToDisplay: Plant[] = [];
   categoriesToSend: string[] = [];
   filteredPlants: Plant[] = [];
+  query!:string;
+  categories: string[] = [];
+
   constructor(private plantsService: PlantsService) {}
 
   ngOnInit(): void {
@@ -20,7 +23,6 @@ export class PageHomeComponent implements OnInit{
     this.plantsToDisplay = [...data];
     this.filteredPlants = [...data];
     this.categoriesToSend = this.getCategoriesFromPlants(data);
-    // console.log(this.getCategoriesFromPlants(this.plantsToDisplay));
     });
   }
 
@@ -31,12 +33,27 @@ export class PageHomeComponent implements OnInit{
     return categoryArrayUnique;    
  }
  filterPlantsByCategories(categories: string[]){
-// Implémentation du filtre des plantes en fonction de leur catégorie
+  this.categories = categories;
 this.filteredPlants = this.plantsToDisplay.filter((plant) =>
 categories.includes(plant.categorie))
+this.applyFilters();
  }
- filterPlantsBySearch(query: any) {
+ filterPlantsBySearch(query: string) {
+  this.query = query;
   this.filteredPlants = this.plantsToDisplay.filter((plant) =>
-  plant.nom.toLowerCase().includes(query.toLowerCase())
+  plant.nom.toLowerCase().includes(this.query.toLowerCase())
   );
+  this.applyFilters();
+}
+
+private applyFilters() {
+ if (true){
+  this.filteredPlants = this.plantsToDisplay.filter((plant) =>
+  this.categories.includes(plant.categorie))
+ }
+if (true){
+  this.filteredPlants = this.plantsToDisplay.filter((plant) =>
+  plant.nom.toLowerCase().includes(this.query.toLowerCase())
+  );
+}
 }}

@@ -6,8 +6,11 @@
     gap: 1rem;
     /* pour espacer et rem pour remplacer px, plus adaptable */
     justify-content: space-between;
-    border-color: green;
-    border-radius : 4px
-    
+       
+  }
 
+  .border-box {
+    border-width: 2rem;
+    border-bottom-color: green;
+    border-radius : 5px
   }
