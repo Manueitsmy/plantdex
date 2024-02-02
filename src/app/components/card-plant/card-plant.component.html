@@ -1,10 +1,13 @@
-<div class="card" style="width: 18rem;">
+<div class="card">
+  <div class="container-img-plant">
     <img [src]="plant.image" class="card-img-top" alt="plant.nom"/>
-    <div class="card-body">
+  </div>
+  
+  <div class="card-body">
         <h5 class="card-title text-truncate" [title]="plant.nom">
             {{ plant.nom }}
           </h5>
-      <p class="card-text">{{ plant.categorie }}</p>
+      <p class="card-text border-box">{{ plant.categorie }}</p>
       <a href="#" class="btn btn-success">Je l'ai !</a>
     </div>
   </div>

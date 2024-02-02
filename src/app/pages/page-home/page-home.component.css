@@ -1,16 +1,18 @@
 .container-plants {
     display: flex;
-    /* pour mettre à la ligne */
     flex-wrap: wrap;
-    /* pour mettre à la ligne en fin de page */
-    gap: 1rem;
-    /* pour espacer et rem pour remplacer px, plus adaptable */
     justify-content: space-between;
-      
+    align-content: space-between;
+    /* gap: 2rem; */
   }
 
-  .border-box {
-    border-width: 2rem;
-    border-bottom-color: green;
-    border-radius : 50px;
+  .one-plants {
+  width: 32%;
+  margin-bottom : 1.5rem;
+ }
+
+  @media (min-width: 1200px) {
+    .one-plants{
+      width: 23%;
+    }
   }

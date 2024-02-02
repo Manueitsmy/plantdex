@@ -1,0 +1,15 @@
+.border-box {
+    border-width: 2rem;
+    border-bottom-color: green;
+    border-radius : 50px;
+  }
+
+  .container-img-plant {
+    text-align: center;
+    height: 15rem;;
+  }
+
+  img {
+  max-height: 100%;
+  width: auto;
+  }

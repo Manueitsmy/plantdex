@@ -9,8 +9,8 @@
   <app-search-bar class="p-4" (searchHome)="filterPlantsBySearch($event)">
   </app-search-bar> 
   </div>
-  <div class="container-plants  p-4 border-box">
-    <app-card-plant
+  <div class="container-plants  p-4">
+    <app-card-plant class="one-plants"
       *ngFor="let plantData of filteredPlants"
       [plant]="plantData"
     ></app-card-plant>
