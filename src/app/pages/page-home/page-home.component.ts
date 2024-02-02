@@ -12,7 +12,7 @@ export class PageHomeComponent implements OnInit{
   plantsToDisplay: Plant[] = [];
   categoriesToSend: string[] = [];
   filteredPlants: Plant[] = [];
-  query!:string;
+  query:string = '';
   categories: string[] = [];
 
   constructor(private plantsService: PlantsService) {}
@@ -34,26 +34,24 @@ export class PageHomeComponent implements OnInit{
  }
  filterPlantsByCategories(categories: string[]){
   this.categories = categories;
-this.filteredPlants = this.plantsToDisplay.filter((plant) =>
-categories.includes(plant.categorie))
+// this.filteredPlants = this.plantsToDisplay.filter((plant) =>
+// categories.includes(plant.categorie))
 this.applyFilters();
  }
  filterPlantsBySearch(query: string) {
   this.query = query;
-  this.filteredPlants = this.plantsToDisplay.filter((plant) =>
-  plant.nom.toLowerCase().includes(this.query.toLowerCase())
-  );
+  // this.filteredPlants = this.plantsToDisplay.filter((plant) =>
+  // plant.nom.toLowerCase().includes(this.query.toLowerCase())
+  // );
   this.applyFilters();
 }
 
-private applyFilters() {
- if (true){
-  this.filteredPlants = this.plantsToDisplay.filter((plant) =>
-  this.categories.includes(plant.categorie))
- }
-if (true){
-  this.filteredPlants = this.plantsToDisplay.filter((plant) =>
+applyFilters() {
+
+  const tabCatSearch = this.plantsToDisplay.filter((plant) =>
+  this.categories.length === 0 || this.categories.includes(plant.categorie));
+
+  this.filteredPlants = tabCatSearch.filter((plant) =>
   plant.nom.toLowerCase().includes(this.query.toLowerCase())
   );
-}
 }}
