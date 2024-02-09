@@ -13,6 +13,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { CardPlantComponent } from './components/card-plant/card-plant.component';
 import { FilterSideBarComponent } from './components/filter-side-bar/filter-side-bar.component';
 import { SearchBarComponent } from './components/search-bar/search-bar.component';
+import { IconComponent } from './components/icon/icon.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { SearchBarComponent } from './components/search-bar/search-bar.component
     NotFoundComponent,
     CardPlantComponent,
     FilterSideBarComponent,
-    SearchBarComponent
+    SearchBarComponent,
+    IconComponent
   ],
   imports: [
     BrowserModule,

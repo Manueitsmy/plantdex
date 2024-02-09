@@ -2,11 +2,17 @@
   <div>
   <app-filter-side-bar [categoriesToDisplay]="categoriesToSend" 
   (categoriesToFilter)="filterPlantsByCategories($event)">
-</app-filter-side-bar>
+</app-filter-side-bar></div>
+<div>
 </div>
 <div>
 <div>
-  <app-search-bar class="p-4" (searchHome)="filterPlantsBySearch($event)">
+
+  <app-icon class="sun-icon" [iconName]="'bi-brightness-high'"></app-icon>
+  <app-icon [iconName]="'bi-brightness-high-fill'"></app-icon>
+  <app-icon class="drop-icon" [iconName]="'bi-droplet'"></app-icon>
+  <app-icon [iconName]="'bi-droplet-fill'"></app-icon>
+  <app-search-bar class="p-4" (searchUser)="filterPlantsBySearch($event)">
   </app-search-bar> 
   </div>
   <div class="container-plants  p-4">
@@ -14,6 +20,7 @@
       *ngFor="let plantData of filteredPlants"
       [plant]="plantData"
     ></app-card-plant>
+
   </div>
 </div>
 </div>

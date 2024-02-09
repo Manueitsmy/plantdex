@@ -54,6 +54,5 @@ applyFilters() {
   this.filteredPlants = tabCatSearch.filter((plant) =>
   plant.nom.toLowerCase().includes(this.query.toLowerCase())
   );
-
   
 }}
