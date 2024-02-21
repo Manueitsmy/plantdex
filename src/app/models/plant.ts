@@ -5,5 +5,6 @@ id: string;
 image: string;
 nom : string;
 soleil : string;
+icons: string[];
 
 }

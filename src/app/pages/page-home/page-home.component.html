@@ -3,20 +3,29 @@
   <app-filter-side-bar [categoriesToDisplay]="categoriesToSend" 
   (categoriesToFilter)="filterPlantsByCategories($event)">
 </app-filter-side-bar></div>
+
 <div>
+  
 </div>
+
 <div>
 <div>
 
-  <app-icon class="sun-icon" [iconName]="'bi-brightness-high'"></app-icon>
-  <app-icon [iconName]="'bi-brightness-high-fill'"></app-icon>
-  <app-icon class="drop-icon" [iconName]="'bi-droplet'"></app-icon>
-  <app-icon [iconName]="'bi-droplet-fill'"></app-icon>
+
   <app-search-bar class="p-4" (searchUser)="filterPlantsBySearch($event)">
   </app-search-bar> 
   </div>
-  <div class="container-plants  p-4">
-    <app-card-plant class="one-plants"
+    <div>
+            <ng-container *ngFor="let icon of sunIcons">
+        <app-icon class="sun-icon" [iconName]="icon"></app-icon>
+      </ng-container>
+
+       <ng-container *ngFor="let icon of dropIcons">
+        <app-icon class="drop-icon" [iconName]="icon"></app-icon>
+      </ng-container>
+    </div>
+  <div class="container-plants p-4 ">
+    <app-card-plant class="one-plants sun-icon"
       *ngFor="let plantData of filteredPlants"
       [plant]="plantData"
     ></app-card-plant>

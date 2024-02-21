@@ -1,12 +1,11 @@
 .border-box {
-    border-width: 2rem;
-    border-bottom-color: green;
-    border-radius : 50px;
+  border: solid 3px;
+    border-radius : 20px;
   }
 
   .container-img-plant {
     text-align: center;
-    height: 15rem;;
+    height: 15rem;
   }
 
   img {

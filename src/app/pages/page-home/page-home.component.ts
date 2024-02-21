@@ -14,6 +14,8 @@ export class PageHomeComponent implements OnInit{
   filteredPlants: Plant[] = [];
   query:string = '';
   categories: string[] = [];
+  sunIcons: string[] = ['bi-sun-fill', 'bi-sun-fill', 'bi-sun-fill'];
+  dropIcons: string[] = ['bi-droplet-fill', 'bi-droplet-fill', 'bi-droplet-fill'];
 
   constructor(private plantsService: PlantsService) {}
 
@@ -54,5 +56,6 @@ applyFilters() {
   this.filteredPlants = tabCatSearch.filter((plant) =>
   plant.nom.toLowerCase().includes(this.query.toLowerCase())
   );
+  
   
 }}
